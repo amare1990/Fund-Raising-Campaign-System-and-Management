@@ -1,0 +1,41 @@
+
+{% load static %}
+<html>
+<head><title> Post Here </title> 
+
+<!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      
+        <h1>you can post here {{ user.first_name}}  </h1>
+        <h3>Just fill out the form.</h3>
+{% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li class="{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+        
+         <form enctype="multipart/form-data" method="POST">
+             {% csrf_token %}         
+           
+              {{ post_form.as_p }}
+          
+            <center>         
+          <input type="submit" name="" value="post Here" class="btn btn-primary">  </center> 
+        </form>
+        
+    
+    </div>
+  </div>
+
+</body>
+</html>

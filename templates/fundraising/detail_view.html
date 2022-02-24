@@ -1,0 +1,29 @@
+
+
+{% load static %}
+<html>
+<head><title> Promise Update Form </title>
+
+ <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<div class="container"> 
+    <!-- Display attributes of instance -->
+
+    username:       {{ data.user }} <br/> 
+    Full Name:      {{ data.full_name_promise }} <br/> 
+    Promised Birr:  {{ data.amount_in_ETB }} <br/> 
+    On behalf of:   {{ data.on_behalf_of }} <br/> 
+    Modified on:    {{ data.created_on }} 
+
+</div> 
+
+
+
+</body>
+</html>

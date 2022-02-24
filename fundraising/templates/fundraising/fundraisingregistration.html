@@ -1,0 +1,20 @@
+<html>
+<head><title> Add Bio Page </title> </head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      
+        <h1>Add Important biographical details</h1>
+        <h3>Just fill out the form.</h3><form enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+          {{ user_form.as_p }}
+          {{ worker_form.as_p }}          
+          <input type="submit" name="" value="Add">
+        </form>
+        
+     
+    </div>
+  </div>
+
+</body>
+</html>

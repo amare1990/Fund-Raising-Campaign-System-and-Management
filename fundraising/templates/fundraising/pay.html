@@ -1,0 +1,22 @@
+<html>
+<head><title> Promise Here </title> </head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      
+        <h1>Compassion is not something you can backsee it!</h1>
+        <h3>Just fill out the form.</h3>
+
+        <form enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+         
+          {{ pay_form.as_p }}          
+          <input type="submit" name="" value="Pay">
+        </form>
+        
+     
+    </div>
+  </div>
+
+</body>
+</html>

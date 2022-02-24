@@ -1,0 +1,36 @@
+{% load static %}
+<html>
+<head><title> Promise Update Form </title>
+
+ <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<header><div class ="container"></div> </header>
+</head>
+
+<body>
+
+
+<div class="container"> 
+<div class="jumbotron">
+<center><P class="text-secondary"><h2>You Can Change Your Promise Here</h2></p></center>
+    <!-- Create a Form -->
+    <form method="POST"> 
+        <!-- Security token by Django -->
+        {% csrf_token %} 
+  
+        <!-- form as paragraph -->
+        {{ form.as_p }} 
+  
+       <center> <input type="submit" value="Update" class ="btn btn-primary"> </center> 
+    </form> 
+  
+</div> 
+</div> 
+
+
+</body>
+</html>
+
+

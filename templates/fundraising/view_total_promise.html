@@ -1,0 +1,45 @@
+{% load static %}
+<html>
+<head><title> Total Promise </title>
+
+ <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<div class="container"> 
+    <!-- Display attributes of instance -->
+ <div class="row" >
+<div style="background-color: #abff00; color: #ffffff>
+    <div class="col-md-8 card mb-4  mt-3 left  top">
+      <div class="card-body" >
+
+
+<table class="table">
+<tr>
+<thead class="thead-dark">
+<th>username</th>
+<th>Full Name</th>
+<th>On Behalf of</th>
+<th>Amount of Money</th>
+</thead>
+</tr>
+{% for n in p %}
+<tr>
+<td>{{n.user}}</td>  <td>{{n.full_name_promise}} </td> <td>{{n.on_behalf_of}}</td>  <td> {{n.amount_in_ETB}}</td>   </tr>
+
+{% endfor %}
+</table>
+
+
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+
+</body>
+</html>

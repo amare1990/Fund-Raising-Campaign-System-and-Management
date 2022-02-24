@@ -1,0 +1,22 @@
+{% extends "articles/articlesbase.html" %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8 mt-3 left">
+            <p> Write posts here...
+            <div class="card mb-4">
+               <form enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+          {{ post_form.as_p }}
+          
+           <input type="submit" name="" value="Post">
+        </form>    
+            </div>
+           
+        </div>
+        {% block sidebar %} {% include 'articles/sidebar.html' %} {% endblock sidebar %}
+    </div>
+</div>
+{%endblock%}
